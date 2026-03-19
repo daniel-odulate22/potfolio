@@ -1,0 +1,46 @@
+.theme-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background-color var(--transition);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background-color: var(--muted);
+}
+
+/* Wrapper for each icon — positioned absolute so they stack */
+.theme-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.theme-icon--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Moon slides out upward when switching to light */
+.theme-icon--hidden-up {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+/* Sun slides in from below when switching to dark */
+.theme-icon--hidden-down {
+  opacity: 0;
+  transform: translateY(30px);
+}

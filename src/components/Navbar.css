@@ -1,0 +1,85 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 24px 0;
+
+  /* mix-blend-difference makes text invert against the page content.
+     This is what gives the navbar its "always readable" look. */
+  mix-blend-mode: difference;
+
+  /* Slide in on page load */
+  animation: navSlideDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes navSlideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+/* After scrolling 60px, add a subtle backdrop. Because of mix-blend-difference
+   the background must be white (it gets inverted to black over dark content) */
+.navbar--scrolled {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-family: var(--font-hero);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.04em;
+  color: var(--fg);
+  transition: color var(--transition);
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  /* mix-blend-exclusion lets the logo always show white-ish against any bg */
+  mix-blend-mode: exclusion;
+  color: white; /* white gets inverted by mix-blend to look correct on both modes */
+}
+
+.navbar__dot {
+  color: var(--primary);
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  mix-blend-mode: exclusion;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar__links button {
+  font-size: 14px;
+  font-weight: 500;
+  color: white; /* inverted by mix-blend */
+  transition: color var(--transition);
+}
+
+.navbar__links button:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  .navbar__links {
+    display: none;
+  }
+}
