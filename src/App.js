@@ -3,7 +3,7 @@ import { Navbar } from './components/Navbar';
 import { SnakeGame } from './components/games/SnakeGame';
 import { MemoryMatch } from './components/games/MemoryMatch';
 import { TypingTest } from './components/games/TypingTest';
-import avatarImg from './assets/avatar.png'; // Add your photo here
+//import avatarImg from './assets/avatar.png'; // Add your photo here
 import './App.css';
 
 /* ─── Scroll-reveal with IntersectionObserver ─── */
