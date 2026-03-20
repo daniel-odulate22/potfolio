@@ -37,13 +37,23 @@ export function SnakeGame() {
   const dirRef   = useRef({ x: 1, y: 0 });
   const boardRef = useRef(null);
 
+  // 1. Move the check to a separate helper outside the loop logic
+const isOccupied = (coord, snake) => {
+  return snake.some(s => s.x === coord.x && s.y === coord.y);
+};
+
   const genFood = useCallback((currentSnake) => {
     let f;
+  // 2. The loop now calls a pre-defined function instead of creating a new one
     do {
-      f = { x: Math.floor(Math.random() * GRID), y: Math.floor(Math.random() * GRID) };
-    } while (currentSnake.some(s => s.x === f.x && s.y === f.y));
+      f = { 
+        x: Math.floor(Math.random() * GRID), 
+        y: Math.floor(Math.random() * GRID) 
+     };
+    } while (isOccupied(f, currentSnake));
+  
     return f;
-  }, []);
+    }, []);
 
   const reset = () => {
     setSnake([{ x: 7, y: 7 }]);
