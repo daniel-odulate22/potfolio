@@ -161,13 +161,13 @@ export default function App() {
             </h1>
 
             {/* Role subtitle */}
-            <p className="hero__subtitle">
-              Full-Stack Developer &amp; Robotics Software Engineer building intelligent
-              systems and seamless web experiences.
+             <p className="hero__subtitle">
+              Taking what's in your head and bringing it to life.
             </p>
 
-             <p className="hero__subtitle">
-              Taking what is in yor head and puttinh it into the world.
+              <p className="hero__subtitle">
+              Full-Stack Developer &amp; Robotics Software Engineer building intelligent
+              systems and seamless web experiences.
             </p>
 
             {/* CTA links — styled text with arrows, NOT pill buttons */}
