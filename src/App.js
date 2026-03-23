@@ -166,6 +166,10 @@ export default function App() {
               systems and seamless web experiences.
             </p>
 
+             <p className="hero__subtitle">
+              Taking what is in yor head and puttinh it into the world.
+            </p>
+
             {/* CTA links — styled text with arrows, NOT pill buttons */}
             <div className="hero__ctas">
               <button className="cta-link cta-link--primary" onClick={() => scrollTo('projects')}>
