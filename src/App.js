@@ -112,10 +112,10 @@ const PROJECTS = [
     link: 'https://pulse-point-news.vercel.app/',
   },
   {
-    title: 'Vigil Adherence App',
+    title: 'Vigil Health - Medical Adherence App',
     stack: 'Mobile, JS Backend, HealthTech',
-    desc: 'Medication adherence mobile application designed to prevent missed doses with real-time caregiver updates.',
-    link: 'https://github.com/daniel-odulate22',
+    desc: 'The Doulingo but for your medication...except if you miss a streak, it could cost you your life. A Medication adherence mobile application designed to prevent missed doses with real-time caregiver updates.',
+    link: 'https://vigilhealth-waitlist.vercel.app',
   },
   {
     title: 'NutriTrack',
