@@ -161,7 +161,7 @@ export default function App() {
             </h1>
 
             {/* Role subtitle */}
-             <p className="hero__subtitle">
+             <p className="hero_subtitle">
               Taking what's in your head and bringing it to life.
             </p>
 
@@ -221,7 +221,7 @@ export default function App() {
           <SectionLabel title="About" />
           <div className="editorial-content-col">
             <p className="about__text">
-              I'm a passionate software engineer bridging the gap between digital
+              A creative software engineer bridging the gap between digital
               interfaces and physical hardware. With expertise in web development and
               embedded systems, I build solutions that live on screens and move in the
               real world. Constantly exploring the intersection of AI, robotics, and clean UI.
